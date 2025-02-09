@@ -1,10 +1,17 @@
-use rand::{seq::SliceRandom};
+use rand::seq::SliceRandom;
+use std::io;
 
 fn main() {
-    let mut array: Vec<i64> = vec![1,4,34,35,62];
+    println!("Enter the numbers, separated by spaces:");
+
+    let mut s = String::new();
+    io::stdin().read_line(&mut s).unwrap();
+
+    let mut array: Vec<i64> = s.split_whitespace().map(|d| d.parse::<i64>().unwrap()).collect();
+
     array.shuffle(&mut rand::rng());
         
-    loop{
+    loop {
         array.shuffle(&mut rand::rng());
         println!("{:?}",array);
 
@@ -14,7 +21,7 @@ fn main() {
             //}
         //}
         if array.is_sorted() {
-            println!("Final array is");
+            println!("Final array is:");
             println!("{:?}",array);
             break;
         }
