@@ -1,7 +1,7 @@
 use rand::{seq::SliceRandom, Rng};
 
 fn main() {
-    let mut array: [i32;5] = [1,4,34,35,62];
+    let mut array: Vec<i64> = vec![1,4,34,35,62];
     array.shuffle(&mut rand::rng());
         
     loop{
