@@ -1,4 +1,4 @@
-use rand::{seq::SliceRandom, Rng};
+use rand::{seq::SliceRandom};
 
 fn main() {
     let mut array: Vec<i64> = vec![1,4,34,35,62];
@@ -13,7 +13,7 @@ fn main() {
                 //println!("{:?}",array);
             //}
         //}
-        if array.is_sorted() == true{
+        if array.is_sorted() {
             println!("Final array is");
             println!("{:?}",array);
             break;
