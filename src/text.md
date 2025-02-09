@@ -1,0 +1,7 @@
+- What is BogoSort?
+- Where you randomise all the items in the array until they are sorted
+- To do this:
+- We shuffle - meaning we take the input array of elements and randomly shuffle them
+- We then check - meaning we check if the shuffled array is now all sorted
+- We then repeat/iterate this process until it is sorted
+- It has O(n!) -> O(infinite) time order
